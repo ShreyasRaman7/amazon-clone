@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import SearchIcon from '@material-ui/icons/Search';
+import { ShoppingBasket, ShoppingBasketOutlined, ShoppingBasketTwoTone } from '@material-ui/icons';
 function Header() {
   return <nav className ="header">
         
@@ -38,8 +39,11 @@ function Header() {
             </Link>
 
             {/* 4th Link*/ }
-            <Link to "/checkout">
-            
+            <Link to ="/checkout" className="header__link">
+                <div className="header__optionBasket">
+                    <ShoppingBasket/>
+                    <span>0</span>
+                </div>
             </Link>
         </div>
     </nav>
